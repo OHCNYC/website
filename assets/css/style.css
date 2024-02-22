@@ -47,6 +47,10 @@ body {
   display: grid;
 }
 
+html {
+  min-width: 400px;
+}
+
 img {
   max-width: 100%;
 }
