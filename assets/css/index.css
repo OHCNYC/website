@@ -1,0 +1,249 @@
+.hlink1 {
+  grid-area: h1;
+}
+
+.hlink2 {
+  grid-area: h2;
+}
+
+.hlink3 {
+  grid-area: h3;
+}
+
+.hlink4 {
+  grid-area: h4;
+}
+
+.hlink1,
+.hlink2,
+.hlink3,
+.hlink4 {
+  font-family: "terminal";
+  font-size: 30px;
+  text-align: center;
+  padding: 5px;
+}
+
+.logo {
+  grid-area: ll;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.motto1 {
+  grid-area: m1;
+  padding-left: 12px;
+}
+
+.motto2 {
+  grid-area: m2;
+}
+
+.image1,
+.image2 {
+  margin: 12px;
+  outline-offset: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image1 {
+  grid-area: i1;
+  background-color: #B4AFCF;
+}
+
+.image2 {
+  grid-area: i2;
+  background-color: #E0C8B1;
+}
+.image2 img {
+  width: 80%;
+}
+
+.events {
+  grid-area: ev;
+}
+
+.missionstatement {
+  grid-area: st;
+}
+.missionstatement .box {
+  margin: 12px;
+  outline-offset: 12px;
+}
+
+footer {
+  grid-area: ff;
+  background-color: #110B07;
+  color: hsl(0deg, 20%, 98%);
+  border-radius: 30px 30px 0px 0px;
+  margin-top: 40px;
+}
+footer p {
+  padding-left: 15px;
+  float: left;
+  width: 50%;
+}
+footer img {
+  float: right;
+}
+
+body {
+  background-color: hsl(7deg, 22%, 90%);
+  margin: auto;
+}
+
+h1 {
+  text-align: center;
+}
+
+@media only screen and (min-width: 700px) {
+  html {
+    background-color: hsl(0deg, 20%, 98%);
+  }
+  img {
+    width: 90%;
+  }
+  body {
+    padding: 30px 30px 0px 30px;
+    width: 650px;
+    min-height: max-content;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 45px 245px 245px 245px auto auto 240px;
+    grid-template-areas: "h1 h2 h3 h4" "ll ll ll ll" "m1 m1 i1 i1" "i2 i2 m2 m2" "st st st st" "ev ev ev ev" "ff ff ff ff";
+  }
+  h1 {
+    font-size: 45px;
+  }
+  h2,
+h3 {
+    font-size: 40px;
+  }
+  h4 {
+    font-size: 30px;
+  }
+  .motto2 {
+    text-align: end;
+    padding-right: 12px;
+    padding-top: 20px;
+  }
+  .missionstatement p,
+.missionstatement h4 {
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+  }
+  .events li {
+    height: 200px;
+    display: flex;
+  }
+  .events li img {
+    outline-offset: 12px;
+    margin: 12px;
+    height: 70%;
+    width: 30%;
+  }
+  .events li div {
+    padding-left: 5%;
+    width: 60%;
+  }
+  .events li div h4 {
+    margin-top: 0px;
+  }
+  footer img {
+    padding: 30px;
+    width: 18%;
+  }
+}
+@media only screen and (max-width: 700px) {
+  html {
+    background-color: hsl(7deg, 22%, 90%);
+  }
+  img {
+    width: 95%;
+  }
+  body {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 45px 45px auto 215px 165px auto auto 235px;
+    grid-template-areas: "h1 h2" "h3 h4" "ll ll" "m1 m1" "m2 m2" "st st" "ev ev" "ff ff";
+  }
+  .image1,
+.image2 {
+    display: none;
+  }
+  .logo {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  h2,
+h3,
+h4 {
+    font-size: 35px;
+  }
+  h1 {
+    font-size: 45px;
+  }
+  p {
+    margin: auto;
+    width: 95%;
+  }
+  .motto1 {
+    background-image: url("../half-bridge.webp");
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: 180px;
+  }
+  .motto2 {
+    background-image: url("../close-friends.webp");
+    background-position: 10px;
+    background-repeat: no-repeat;
+    background-size: 110px;
+    padding-right: 12px;
+    text-align: end;
+  }
+  .missionstatement p,
+.missionstatement h4 {
+    margin-left: auto;
+    margin-right: auto;
+    width: 95%;
+  }
+  .missionstatement h4 {
+    margin-top: 25px;
+    margin-bottom: 5px;
+  }
+  .events {
+    margin: auto;
+    width: 100%;
+  }
+  .events li {
+    list-style: none;
+  }
+  .events li img {
+    margin: auto;
+    width: 100%;
+    opacity: 100%;
+    margin-bottom: 15px;
+  }
+  .events li div {
+    padding-bottom: 30px;
+    width: 90%;
+  }
+  .events li div h4 {
+    margin-top: 0px;
+  }
+  footer {
+    box-shadow: 0 50vh 0 50vh #000;
+  }
+  footer p {
+    text-align: center;
+    padding-top: 15px;
+  }
+  footer img {
+    padding-right: 15px;
+    padding-top: 20px;
+    height: 150px;
+    width: 150px;
+  }
+}

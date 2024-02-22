@@ -1,0 +1,63 @@
+@font-face {
+    font-family: "riccione";
+    src: url("../fonts/riccione-serial-light-regular.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "terminal";
+    src: url("../fonts/terminal-grotesque.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+$bg-color: #FBF9F9;
+$accent-color-1: #B4AFCF;
+$accent-color-2: #E0C8B1;
+$text-color: #110B07;
+
+a {
+    color: $text-color;
+}
+
+footer a {
+    color: $bg-color;
+}
+
+h1 {
+    font-family: "riccione";
+}
+
+h2 {
+    font-family: "terminal";
+    margin-bottom: -40px;
+}
+
+h3 {
+    font-family: "riccione";
+    letter-spacing: -1px;
+}
+
+h4 {
+    font-family: "terminal";
+    margin-bottom: -15px;
+}
+
+p,
+a {
+    font-family: "terminal";
+    font-size: 25px;
+}
+
+body {
+    display: grid;
+}
+
+img {
+    max-width: 100%;
+}
+
+.box {
+    outline: 1px solid black;
+}
