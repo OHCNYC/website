@@ -167,6 +167,8 @@ h1 {
 
     .events {
         li {
+            padding-left: 30px;
+            padding-right: 10px;
             height: 200px;
             display: flex;
 
@@ -174,8 +176,8 @@ h1 {
                 outline-offset: 12px;
                 margin: 12px;
 
-                height: 70%;
-                width: 30%;
+                height: 130px;
+                width: 130px;
             }
 
             div {

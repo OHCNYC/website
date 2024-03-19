@@ -136,14 +136,16 @@ h3 {
     width: 90%;
   }
   .events li {
+    padding-left: 30px;
+    padding-right: 10px;
     height: 200px;
     display: flex;
   }
   .events li img {
     outline-offset: 12px;
     margin: 12px;
-    height: 70%;
-    width: 30%;
+    height: 130px;
+    width: 130px;
   }
   .events li div {
     padding-left: 5%;
