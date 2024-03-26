@@ -162,6 +162,12 @@ h1 {
     }
 
     .events {
+        p {
+            margin-left: auto;
+            margin-right: auto;
+            width: 90%;
+        }
+
         li {
             padding-left: 30px;
             padding-right: 10px;
@@ -188,9 +194,16 @@ h1 {
     }
 
     footer {
-        img {
+        img.logo {
             padding: 30px;
             width: 18%;
+        }
+
+        img.event {
+            position: absolute;
+            width: 300px;
+            margin-top: -50px;
+            margin-left: -60px;
         }
     }
 }
@@ -208,8 +221,8 @@ h1 {
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 45px 45px auto 215px 165px auto auto 235px;
         grid-template-areas:
+            "h3 h3"
             "h1 h2"
-            "h3 h4"
             "ll ll"
             "m1 m1"
             "m2 m2"
