@@ -160,9 +160,10 @@ h1 {
     width: 18%;
   }
   footer img.event {
+    transform: rotate(-15deg);
     position: absolute;
     width: 300px;
-    margin-top: -50px;
+    margin-top: -30px;
     margin-left: -60px;
   }
 }
@@ -249,10 +250,15 @@ h1 {
     text-align: center;
     padding-top: 15px;
   }
-  footer img {
-    padding-right: 15px;
-    padding-top: 20px;
-    height: 150px;
-    width: 150px;
+  footer img.logo {
+    width: 105px;
+    margin-top: 20px;
+    margin-right: 20px;
+  }
+  footer img.event {
+    transform: rotate(-15deg);
+    position: absolute;
+    width: 280px;
+    margin-left: 20px;
   }
 }

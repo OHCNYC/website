@@ -200,9 +200,10 @@ h1 {
         }
 
         img.event {
+            transform: rotate(-15deg);
             position: absolute;
             width: 300px;
-            margin-top: -50px;
+            margin-top: -30px;
             margin-left: -60px;
         }
     }
@@ -320,11 +321,17 @@ h1 {
 
         box-shadow: 0 50vh 0 50vh #000;
 
-        img {
-            padding-right: 15px;
-            padding-top: 20px;
-            height: 150px;
-            width: 150px;
+        img.logo {
+            width: 105px;
+            margin-top: 20px;
+            margin-right: 20px;
+        }
+
+        img.event {
+            transform: rotate(-15deg);
+            position: absolute;
+            width: 280px;
+            margin-left: 20px;
         }
     }
 }
