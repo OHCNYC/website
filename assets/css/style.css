@@ -33,8 +33,7 @@ body {
     min-height: 100vh;
 }
 
-header,
-footer {
+row {
     display: grid;
     grid-template-columns: 3fr 4fr;
     column-gap: 2px;
@@ -46,6 +45,12 @@ footer {
         padding-top: 4px;
         padding-bottom: 8px;
     }
+}
+
+footer {
+    display: grid;
+    height: 300px;
+    background-color: black;
 }
 
 .ticket {
@@ -158,8 +163,10 @@ footer {
     overflow: hidden;
     display: flex;
     outline: 2px black solid;
+    margin-top: 2px;
 
     a {
+        font-size: xx-large;
         white-space: nowrap;
         outline: 0px;
     }
@@ -182,12 +189,19 @@ footer {
         display: none;
     }
 
+    .marquee {
+        margin-top: 16px;
+
+        a {
+            font-size: 5vw;
+        }
+    }
+
     body {
         padding-inline: 0px;
     }
 
-    header,
-    footer {
+    row {
         margin-block: 2px;
 
         a {
@@ -234,7 +248,7 @@ footer {
 
     .content {
         h1 {
-            font-size: 35px;
+            font-size: 10vw;
         }
 
         ul {

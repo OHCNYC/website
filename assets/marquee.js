@@ -13,7 +13,7 @@ function Marquee() {
         if (i > firstElement.clientWidth) {
             i = 0;
         }
-        i = i + 0.2;
+        i = i + 0.6;
     }, 0);
 }
 
