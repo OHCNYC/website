@@ -1,93 +1,278 @@
-@font-face {
-  font-family: "riccione";
-  src: url("../fonts/riccione-serial-light-regular.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: "terminal";
-  src: url("../fonts/terminal-grotesque.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-}
-a {
-  color: #110B07;
+html {
+    background-color: #FBF9F9;
 }
 
-footer a {
-  color: #FBF9F9;
-}
-
-h1 {
-  font-family: "riccione";
-  letter-spacing: -0.1vw;
+h1,
+h3 {
+    font-family: "riccione";
+    letter-spacing: -0.1vw;
+    margin: auto;
 }
 
 h2 {
-  font-family: "terminal";
-  margin-bottom: -40px;
-  letter-spacing: -0.05vw;
-}
-
-h3 {
-  font-family: "riccione";
-  letter-spacing: -0.1vw;
-}
-
-h4 {
-  font-family: "terminal";
-  margin-bottom: -15px;
+    font-family: "terminal";
+    margin: auto;
 }
 
 p,
 a {
-  font-family: "terminal";
-  font-size: 25px;
-}
-
-body {
-  display: grid;
-}
-
-html {
-  min-width: 410px;
+    color: black;
+    font-family: "terminal";
+    font-size: 25px;
 }
 
 img {
-  max-width: 100%;
+    max-width: 100%;
 }
 
-.box {
-  outline: 1px solid black;
+body {
+    margin: auto;
+    padding-inline: 30px;
+    max-width: 701px;
+    background-color: hsl(7, 22%, 90%);
+    min-height: 100vh;
 }
 
+header,
 footer {
-  border-radius: 30px 30px 0px 0px;
+    display: grid;
+    grid-template-columns: 3fr 4fr;
+    column-gap: 2px;
+
+    a {
+        font-size: xx-large;
+        outline: 2px black solid;
+        text-align: center;
+        padding-top: 4px;
+        padding-bottom: 8px;
+    }
 }
-footer img.logo {
-  padding: 30px;
-  width: 18%;
+
+.ticket {
+    position: absolute;
+    width: 250px;
+    margin-left: 520px;
+    margin-top: 225px;
+    transform: rotate(10deg);
 }
-footer img.event {
-  transform: rotate(-15deg);
-  position: absolute;
-  width: 300px;
-  margin-top: -30px;
-  margin-left: -60px;
+
+.ticket:hover {
+    animation-name: spin;
+    animation-duration: 400ms;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in-out;
+}
+
+.logomark {
+    margin-block: 40px;
+}
+
+.hero {
+    display: grid;
+    grid-template-columns: 3fr 4fr;
+    row-gap: 2px;
+    column-gap: 2px;
+    font-size: xx-large;
+
+    img,
+    .motto1,
+    .motto2 {
+        outline: 2px black solid;
+        padding-inline: 1vw;
+    }
+
+    img {
+        width: 90%;
+        padding: 5%;
+    }
+
+    .bridge {
+        background-color: #B4AFCF;
+    }
+
+    .friends {
+        background-color: #E0C8B1;
+    }
+
+    .motto1 {
+        padding-top: 12px;
+    }
+
+    .motto2 {
+        padding-top: 30px;
+        text-align: end;
+    }
+}
+
+.content {
+    width: 96%;
+    margin: auto;
+    margin-block: 5%;
+
+    h1 {
+        text-align: center;
+        font-size: 45px;
+    }
+
+    h2 {
+        font-size: 35px;
+    }
+
+    li {
+        list-style: none;
+        display: grid;
+        grid-template-columns: 140px auto;
+        grid-template-rows: 160px;
+        column-gap: 20px;
+
+        p {
+            margin: auto;
+        }
+
+        a {
+            font-style: italic;
+        }
+
+        img {
+            width: 90%;
+            padding: 5%;
+            aspect-ratio: 1/1;
+            image-rendering: optimizeSpeed;
+            image-rendering: -moz-crisp-edges;
+            image-rendering: -o-crisp-edges;
+            image-rendering: -webkit-optimize-contrast;
+            image-rendering: pixelated;
+            image-rendering: optimize-contrast;
+            -ms-interpolation-mode: nearest-neighbor;
+        }
+    }
+}
+
+.marquee {
+    overflow: hidden;
+    display: flex;
+    outline: 2px black solid;
+
+    a {
+        white-space: nowrap;
+        outline: 0px;
+    }
+}
+
+@media only screen and (max-width: 750px) {
+    .ticket {
+        margin-left: 500px;
+        margin-top: 225px;
+        width: 200px;
+    }
 }
 
 @media only screen and (max-width: 700px) {
-  footer {
-    border-radius: 0px;
-  }
-  footer img.logo {
-    width: 105px;
-    margin-top: 20px;
-    margin-right: 20px;
-  }
-  footer img.event {
-    width: 280px;
-    margin-top: -10px;
-    margin-left: 20px;
-  }
+    html {
+        background-color: hsl(7, 22%, 90%);
+    }
+
+    .ticket {
+        display: none;
+    }
+
+    body {
+        padding-inline: 0px;
+    }
+
+    header,
+    footer {
+        margin-block: 2px;
+
+        a {
+            font-size: larger;
+        }
+    }
+
+    .logomark {
+        width: 96%;
+        padding-inline: 2%;
+        margin-block: 15px;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+        grid-template-rows: 4fr 3fr;
+        font-size: 6vw;
+
+        img,
+        .motto1,
+        .motto2 {
+            padding-top: 0px;
+            outline: none;
+        }
+
+        h2 {
+            letter-spacing: -0.4vw;
+        }
+
+        img {
+            display: none;
+        }
+
+        .motto1 {
+            background: no-repeat right/38vw url("../half-bridge.webp");
+        }
+
+        .motto2 {
+            background: no-repeat left/24vw url("../close-friends.webp");
+            margin-inline: 1vw;
+            margin-block: 4px;
+        }
+    }
+
+    .content {
+        h1 {
+            font-size: 35px;
+        }
+    }
+}
+
+@font-face {
+    font-family: "riccione";
+    src: url("../fonts/riccione-serial-light-regular.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "terminal";
+    src: url("../fonts/terminal-grotesque.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(10deg);
+        -webkit-transform: rotate(10deg);
+        -moz-transform: rotate(10deg);
+        -ms-transform: rotate(10deg);
+    }
+
+    33% {
+        transform: rotate(6deg);
+        -webkit-transform: rotate(6deg);
+        -moz-transform: rotate(6deg);
+        -ms-transform: rotate(6deg);
+    }
+
+    66% {
+        transform: rotate(16deg);
+        -webkit-transform: rotate(16deg);
+        -moz-transform: rotate(6deg);
+        -ms-transform: rotate(6deg);
+    }
+
+    100% {
+        transform: rotate(10deg);
+        -webkit-transform: rotate(10deg);
+        -moz-transform: rotate(6deg);
+        -ms-transform: rotate(6deg);
+    }
 }
