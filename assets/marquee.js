@@ -13,8 +13,9 @@ function Marquee() {
         if (i > firstElement.clientWidth) {
             i = 0;
         }
-        i = i + 0.6;
+        i = i + speed;
     }, 0);
 }
 
 window.addEventListener('load', Marquee)
+speed = 0.3
