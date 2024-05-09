@@ -134,11 +134,16 @@ footer {
         list-style: none;
         display: grid;
         grid-template-columns: 140px auto;
-        grid-template-rows: 160px;
+        grid-template-rows: auto;
+        margin-block: 30px;
         column-gap: 20px;
 
         p {
             margin: auto;
+
+            a {
+                font-style: normal;
+            }
         }
 
         a {
