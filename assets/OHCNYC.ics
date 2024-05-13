@@ -1,0 +1,19 @@
+BEGIN:VCALENDAR
+CALSCALE:GREGORIAN
+VERSION:2.0
+PRODID:-//Elixir ICalendar//Mobilizon 4.1.0//EN
+BEGIN:VEVENT
+CATEGORIES:hackerspace
+DESCRIPTION:April 2024 Headliners\n\nTales of Hacker-Folk - Chronicling tales of friendship\, sleepless conference travel\, and wearing ill-obtained lab coats. ~ Mars Lee\n\nThe GameTank neo-Console - An open source neo-retro game console the GameTank. ~ Clyde Shaffer\n\nAncient Egyptian Labor Unions - A story about the first recorded example of a modern labor strike. ~ Shaina Peters\n\nConstellation Compilation - A stargazing aid\, made with additive manufacturing. ~ Kaylyn Gibilterra\n\n& Always More - Discourse\, friendships\, pizza\, etc.\n\n
+DTEND;TZID=America/New_York:20240518T140000
+DTSTAMP:20240425T131822Z
+DTSTART;TZID=America/New_York:20240518T130000
+GEO:40.750812;-73.9850251
+LOCATION:Hack Manhattan 34 West 37th Street 10011 New York New York United States
+ORGANIZER:micro
+STATUS:CONFIRMED
+SUMMARY:The Open Hacker Consortium of New York City
+UID:d89e089b-12bc-4241-91c7-6b72a2c8ec27
+URL:https://events.woodbine.nyc/events/d89e089b-12bc-4241-91c7-6b72a2c8ec27
+END:VEVENT
+END:VCALENDAR
