@@ -1,36 +1,19 @@
+@font-face {
+    font-family: "riccione";
+    src: url("../fonts/riccione-serial-light-regular.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "terminal";
+    src: url("../fonts/terminal-grotesque.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
 html {
     background-color: #FBF9F9;
-}
-
-h1,
-h3 {
-    font-family: "riccione";
-    letter-spacing: -0.1vw;
-    margin: auto;
-}
-
-h2 {
-    font-family: "terminal";
-    margin: auto;
-}
-
-p,
-a {
-    color: black;
-    font-family: "terminal";
-    font-size: 25px;
-}
-
-img {
-    max-width: 100%;
-}
-
-body {
-    margin: auto;
-    padding-inline: 30px;
-    max-width: 701px;
-    background-color: hsl(7, 22%, 90%);
-    min-height: 100vh;
 }
 
 row {
@@ -47,280 +30,91 @@ row {
     }
 }
 
-footer {
+ul {
+    padding-inline-start: 0px;
+
+    li {
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+}
+
+h1,
+h3 {
+    font-family: "riccione";
+    letter-spacing: -0.1vw;
+    margin: auto;
+}
+
+h2 {
+    font-family: "terminal";
+    margin: auto;
+}
+
+a,
+p {
+    color: black;
+    font-family: "terminal";
+}
+
+li {
+    list-style: none;
     display: grid;
-    height: 300px;
-    background-color: black;
-}
+    grid-template-columns: 140px auto;
+    grid-template-rows: auto;
+    margin-block: 30px;
+    column-gap: 20px;
 
-.ticket {
-    position: absolute;
-    width: 250px;
-    margin-left: 520px;
-    margin-top: 225px;
-    transform: rotate(10deg);
-    z-index: 1;
-}
+    p {
+        margin: auto;
 
-.ticket:hover {
-    animation-name: spin;
-    animation-duration: 400ms;
-    animation-iteration-count: 1;
-    animation-timing-function: ease-in-out;
-}
+        a {
+            font-style: normal;
+        }
+    }
 
-.logomark {
-    margin-block: 40px;
-}
-
-.hero {
-    display: grid;
-    grid-template-columns: 3fr 4fr;
-    row-gap: 2px;
-    column-gap: 2px;
-    font-size: xx-large;
-
-    img,
-    .motto1,
-    .motto2 {
-        outline: 2px black solid;
-        padding-inline: 1vw;
+    a {
+        font-style: italic;
     }
 
     img {
         width: 90%;
         padding: 5%;
-    }
-
-    .bridge {
-        background-color: #B4AFCF;
-    }
-
-    .friends {
-        background-color: #E0C8B1;
-    }
-
-    .motto1 {
-        padding-top: 12px;
-    }
-
-    .motto2 {
-        padding-top: 30px;
-        text-align: end;
-    }
-}
-
-.content {
-    width: 96%;
-    margin: auto;
-    margin-block: 5%;
-
-    h1 {
-        text-align: center;
-        font-size: 45px;
-    }
-
-    h2 {
-        font-size: 35px;
-    }
-
-    ul {
-        h1 {
-            margin-bottom: 20px;
-        }
-    }
-
-    li {
-        list-style: none;
-        display: grid;
-        grid-template-columns: 140px auto;
-        grid-template-rows: auto;
-        margin-block: 30px;
-        column-gap: 20px;
-
-        p {
-            margin: auto;
-
-            a {
-                font-style: normal;
-            }
-        }
-
-        a {
-            font-style: italic;
-        }
-
-        img {
-            width: 90%;
-            padding: 5%;
-            aspect-ratio: 1/1;
-            image-rendering: optimizeSpeed;
-            image-rendering: -moz-crisp-edges;
-            image-rendering: -o-crisp-edges;
-            image-rendering: -webkit-optimize-contrast;
-            image-rendering: pixelated;
-            image-rendering: optimize-contrast;
-            -ms-interpolation-mode: nearest-neighbor;
-        }
-    }
-}
-
-.marquee {
-    overflow: hidden;
-    display: flex;
-    outline: 2px black solid;
-    margin-top: 2px;
-
-    a {
-        font-size: xx-large;
-        white-space: nowrap;
-        outline: 0px;
+        aspect-ratio: 1/1;
+        image-rendering: optimizeSpeed;
+        image-rendering: -moz-crisp-edges;
+        image-rendering: -o-crisp-edges;
+        image-rendering: -webkit-optimize-contrast;
+        image-rendering: pixelated;
+        image-rendering: optimize-contrast;
+        -ms-interpolation-mode: nearest-neighbor;
     }
 }
 
 @media only screen and (max-width: 750px) {
-    .ticket {
-        margin-left: 500px;
-        margin-top: 225px;
-        width: 200px;
-    }
-}
+    li {
+        grid-template-columns: 20vw auto;
+        grid-template-rows: auto;
+        margin-block: 10vw;
+        column-gap: 2vw;
 
-@media only screen and (max-width: 700px) {
-    html {
-        background-color: hsl(7, 22%, 90%);
-    }
-
-    .ticket {
-        display: none;
-    }
-
-    .marquee {
-        margin-top: 16px;
-
-        a {
-            font-size: 5vw;
+        h2 {
+            font-size: 6vw;
         }
+
+        a,
+        p {
+            font-size: 4vw;
+        }
+    }
+
+    row a {
+        font-size: 6vw;
     }
 
     body {
-        padding-inline: 0px;
-    }
-
-    row {
-        margin-block: 2px;
-
-        a {
-            font-size: larger;
-        }
-    }
-
-    .logomark {
-        width: 96%;
-        padding-inline: 2%;
-        margin-block: 15px;
-    }
-
-    .hero {
-        grid-template-columns: 1fr;
-        grid-template-rows: 4fr 3fr;
-        font-size: 6vw;
-
-        img,
-        .motto1,
-        .motto2 {
-            padding-top: 0px;
-            outline: none;
-        }
-
-        h2 {
-            letter-spacing: -0.4vw;
-        }
-
-        img {
-            display: none;
-        }
-
-        .motto1 {
-            background: no-repeat right/38vw url("../half-bridge.webp");
-        }
-
-        .motto2 {
-            background: no-repeat left/24vw url("../close-friends.webp");
-            margin-inline: 1vw;
-            margin-block: 4px;
-        }
-    }
-
-    .content {
-        h1 {
-            font-size: 10vw;
-        }
-
-        ul {
-            padding: 0px;
-
-            h1 {
-                margin-top: -25px;
-            }
-        }
-
-        li {
-            grid-template-columns: auto;
-            grid-template-rows: auto;
-
-            div {
-                margin-bottom: 30px;
-            }
-
-            img {
-                padding: 0px;
-                width: 80px;
-            }
-        }
-    }
-}
-
-@font-face {
-    font-family: "riccione";
-    src: url("../fonts/riccione-serial-light-regular.ttf") format("truetype");
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: "terminal";
-    src: url("../fonts/terminal-grotesque.ttf") format("truetype");
-    font-weight: normal;
-    font-style: normal;
-}
-
-@keyframes spin {
-    0% {
-        transform: rotate(10deg);
-        -webkit-transform: rotate(10deg);
-        -moz-transform: rotate(10deg);
-        -ms-transform: rotate(10deg);
-    }
-
-    33% {
-        transform: rotate(6deg);
-        -webkit-transform: rotate(6deg);
-        -moz-transform: rotate(6deg);
-        -ms-transform: rotate(6deg);
-    }
-
-    66% {
-        transform: rotate(16deg);
-        -webkit-transform: rotate(16deg);
-        -moz-transform: rotate(6deg);
-        -ms-transform: rotate(6deg);
-    }
-
-    100% {
-        transform: rotate(10deg);
-        -webkit-transform: rotate(10deg);
-        -moz-transform: rotate(6deg);
-        -ms-transform: rotate(6deg);
+        padding-inline: 2vw;
+        border-radius: 0px;
+        min-height: 100vh;
     }
 }
