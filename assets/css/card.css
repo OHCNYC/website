@@ -51,8 +51,4 @@ html.top video {
   html.framed body {
     padding-inline: 0px;
   }
-  li a,
-  li p {
-    font-size: 4vw;
-  }
 }

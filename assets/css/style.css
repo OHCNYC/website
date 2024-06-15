@@ -93,6 +93,10 @@ li img {
   li h2 {
     font-size: 6vw;
   }
+  li a,
+  li p {
+    font-size: 4vw;
+  }
   row a {
     font-size: 6vw;
   }
